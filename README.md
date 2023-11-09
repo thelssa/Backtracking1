@@ -1,3 +1,5 @@
+#LUM Thelma
+
 # Objectif du BACKTRACKING
    L'objectif du backtracking est de résoudre des problèmes de recherche et d'optimisation en explorant systématiquement un ensemble de solutions potentielles. 
 
