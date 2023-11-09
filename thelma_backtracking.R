@@ -17,26 +17,24 @@ backtracking <- function(x, y) {
   }
   
   placer_dames <- function(cb, colonne = 1) {
-    while (colonne <= x) {
+    if (colonne > x) {
+      k <<- k + 1
+      print(cb)
+    } else {
       ligne <- 1
       while (ligne <= y) {  # Utilisez y pour le nombre de colonnes
         if (est_valide(cb, colonne, ligne)) {
           cb[colonne] <- ligne
-          if (colonne == x) {
-            k <<- k + 1
-            print(cb)
-          } else {
-            placer_dames(cb, colonne + 1)
-          }
+          placer_dames(cb, colonne + 1)
         }
         ligne <- ligne + 1
       }
-      colonne <- colonne + 1
     }
   }
   
   placer_dames(cb_initial)
-  cat("Nombre de k trouvées:", k, "\n") # Affiche le nombre total de solutions trouvées.
+  cat("Nombre de k trouvées:", k, "\n") #Affiche le nombre total de solutions trouvées.
+  
   
   # Création du heatmap pour visualiser les cases les plus touchées
   
@@ -50,7 +48,7 @@ backtracking <- function(x, y) {
       if (i != col) {
         # Attaques horizontales et diagonales
         
-        plateau[cb_initial[i], col] <- plateau[cb_initial[i], col] + 1 # Incrémente le nombre d'attaques sur la case correspondante dans la matrice
+        plateau[cb_initial[i], col] <- plateau[cb_initial[i], col] + 1 #Incrémente le nombre d'attaques sur la case correspondante dans la matrice
         
         if (cb_initial[i] + (col - i) > 0 && cb_initial[i] + (col - i) <= y) {
           plateau[cb_initial[i] + (col - i), col] <- plateau[cb_initial[i] + (col - i), col] + 1
@@ -64,7 +62,7 @@ backtracking <- function(x, y) {
     col <- col + 1
   }
   
-  # Création du heatmap avec la bibliothèque gplots
+  #Création du heatmap avec la bibliothèque gplots
   
   heatmap(as.matrix(plateau), Rowv = NA, Colv = NA, col = heat.colors(12), scale = "column",
           main = "Backtracking", xlab = "Colonnes", ylab = "Lignes",
@@ -72,4 +70,6 @@ backtracking <- function(x, y) {
 }
 
 # Lancement de la fonction principale
-backtracking(5, 5)
+backtracking(10, 10)
+
+
