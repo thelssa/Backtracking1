@@ -138,4 +138,4 @@ Il suffit d'appeller la fonction **_backtracking()_** et d'y ajouter en paramêt
 
 ## 6- Conclusion
 
-Ce code resoud le problème des huit dames (Eight Queens Problem). L'objectif est de placer huit dames sur un échiquier de manière à ce qu'aucune dame ne puisse attaquer une autre dame.
+Cet algorithme utilise le concept de backtracking pour explorer de manière exhaustive toutes les possibilités tout en effectuant des vérifications pour s'assurer qu'une configuration donnée est valide. L'utilisation d'une matrice heatmap permet de visualiser les positions les plus touchées sur l'échiquier.
