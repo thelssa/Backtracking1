@@ -25,7 +25,7 @@ Pour visualiser le headmap il est judicieux d'insataller gplots ()
 ave la syntaxe suivante: **_install.packages("ggplot2")_**
 
 **Listes des librairies**
-voir documentation
+voir documentation R: https://fr.wikibooks.org/wiki/Programmer_en_R/Installer_des_librairies
 
 ℹ️ **Info:** Pour éviter des imprévus, charger toutes les plibrairies avant chaque script.
 
