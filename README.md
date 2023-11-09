@@ -134,6 +134,7 @@ Appelle la fonction lacer_dames pour commencer le processus de backtracking.
 ## 5- Comment lancer le progragmme?
 
 Il suffit d'appeller la fonction **_backtracking()_** et d'y ajouter en paramêtre le nombre de dames et la taille de l'échiquier.
+ℹ️ **Exemple:** backtracking(5,5) 
 
 ## 6- Conclusion
 
